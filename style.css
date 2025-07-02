@@ -5,32 +5,48 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
   text-align: center;
-  background: white;
-  padding: 40px;
+  background: #fff;
+  padding: 30px 20px;
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  overflow: visible;
 }
 
 h1 {
   color: #ff5c8d;
+  margin-bottom: 10px;
 }
 
 .message {
   font-size: 18px;
-  margin: 20px 0;
   color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.emoji-text {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.tenor-gif-embed {
+  margin: 20px 0;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 18px;
   background-color: #ff5c8d;
   color: white;
+  font-size: 18px;
+  padding: 10px 25px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -38,15 +54,23 @@ button {
 }
 
 button:hover {
-  background-color: #ff3c70;
+  background-color: #ff3973;
 }
 
+#response {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ff5c8d;
+  font-weight: bold;
+}
+
+/* Heart Animation */
 .heart {
   width: 60px;
   height: 60px;
   background-color: red;
   position: relative;
-  margin: 20px auto;
+  margin: 25px auto;
   transform: rotate(-45deg);
   animation: beat 1s infinite;
 }
@@ -78,29 +102,4 @@ button:hover {
   50% {
     transform: rotate(-45deg) scale(1.2);
   }
-}
-.typewriter-text {
-  font-size: 22px;
-  color: #ff5c8d;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #ff5c8d;
-  width: 0;
-  animation: typing 4s steps(40, end) 1s forwards, blink 0.7s infinite;
-  margin-bottom: 20px;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 380px; } /* Adjust width as needed */
-}
-.tenor-gif-embed {
-  margin: 20px 0;
-}
-
-
-@keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: #ff5c8d; }
 }
